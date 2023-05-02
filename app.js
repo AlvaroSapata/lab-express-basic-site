@@ -4,7 +4,7 @@ const app = express()
 app.use(express.static("public"))
 
 app.get('/', (req, res) => {
-  res.send('Hello Worlds!')
+  res.sendFile(__dirname + "/views/home.html")
 })
 
 app.get("/home",(req,res)=> {
